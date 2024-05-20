@@ -33,3 +33,5 @@ const hey = 18 // напише по дефолту якщо не буде вик
 if (age === 19 && name === "vlad" && vald){
   console.log(age);
 }
+
+//
