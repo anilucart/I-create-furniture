@@ -1,0 +1,175 @@
+body{
+    margin: 0;/* це прибрав дефолтні відступи   */
+    font-family: "Raleway", sans-serif;
+   font-optical-sizing: auto;
+   
+   font-style: normal;
+   
+}
+    /* шрифт на весь сайт */
+
+ul{ /*  щоб прибрати анордер ліст крапочки */
+list-style-type: none;
+ margin: 0;/* теж дефолтний був 16px з верху та знизу */
+}
+a{/* посилання прибрати нижне підкреслення  */
+text-decoration: none;
+ color: inherit;/*inherit означає наслідувати цим ми кажемо наслідувати наприклад від li це 
+ як з батьківським елементом  */
+  /* padding-left: 10px; */
+  /* Якщо писати лише дів значення (10px 5px) -то це буде означати що перше верх та низ а друге право та ліво 
+  а якщо писати далі по 3-4 значення перше, верх право низ ліво   */
+}
+.header{
+    
+    padding: 0 20px;
+    background-image: url(/css/img/pexels-8moments-1183099.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-clip: content-box; */
+    
+}
+
+.header::after{
+content: '';
+position: absolute;
+background: #0c2936;
+opacity: .6;
+top: 0;
+left: 0;
+width:100%;
+height: 100%;
+transition: all .25s ease;
+
+
+
+
+
+
+}
+.nav{
+    height: 50px;
+    /* line-height: 50px; встановив по центру  */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*це в середині блоку я зробив місце між елементами */
+    position: relative;
+    z-index: 1;
+    
+}
+/* command f виклик пошукової стрічки  */
+.logo-link{
+    display: flex;
+    height: 10%;
+    align-items: center;
+}
+.logo-img{
+    height: 40px;
+    
+}
+.logo-heart{
+    margin-right: 1px;
+}
+    
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+.nav-list li{
+
+    padding: 0 10px;
+color: white;
+font-weight: 300;
+font-size: 16px;
+/* justify-content: center; ця коматна виводить все в центер батьківсьокго елементу*/
+/* flex-grow: 1;ця штука буде давати розмір на скільки є місце а якщо їх є декілька ти найбільний буде той в якого найбільше цифра 
+flex-shrink навпаки  це все працює до батьківського блоку
+flex-wrap -здвигає обєкти якщо не достатньо місця 
+flex-directoin: column; -робить колону але думаю є і інші 
+order - виводить по обєкт на місце яке ми даємо
+
+ */
+ 
+/* знати мало для зануд  */
+}
+.nav-list-link{
+    position: relative;
+    transition: all .25s ease; 
+}
+.nav-list-link::after{
+    content:"" ;
+    background: #17baaa;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    transform: scaleX(0);/*ось тут його не видно   */
+    transition: all .25s ease; 
+} 
+.nav-list-link:hover{
+    color: #17baaa;
+}
+.nav-list-link:hover::after{
+ transform: scaleX(1);/* але при наведенні буде видно */
+
+}
+.nav-list li:last-of-type{
+    padding-right: 0;
+}
+.nav-list li:last-child a{ 
+    height: 30px;
+    /* line-height: 30px; */
+    align-items: center;
+    border-radius: 4px;
+   display: flex; /*  a це лінійний рядок тому потрібно зробити його блочним */
+    padding: 0 10px;
+    background-color:#dd3d34;
+     transition: all .25s ease; /* затримка часу при наведенні можна без крапки 25s це як 250 ms або 250ms */
+
+    /* якщо написати first-child вибереться перший елемент  
+    якщо nth-child(2) є можливість вибирати який я елемент вибираю  псевдоклас : */
+    /* last-child вибирає елемет який знаходиться і додію нові елементи які він приймає в себе */
+/* last-child  рахує все і навіть якщо буде span в середині його теж врахує 
+nth-of-type  я звертаюсь суто до li тому різниця очевидна .nav-list li:nth-of-type(2){ це можна last-of-type
+    що автоматично означає останній 
+приклад написаного } 
+ */
+}
+.nav-list li:last-child a svg{
+  width: 1em;
+  
+}
+.nav-list li:last-child a:hover{
+    background-color:#c9233a;
+
+}
+/* їх можна писати в новому рядку кожен маю на увазі псевдоклас  */
+.nav-list li:last-child a:active{
+    background-color: black;
+}
+.h1color1{
+    size: 500px;
+    font-size: 60px;
+}
+.h1color2{
+    color: #17baaa;
+    font-size: 56px;
+}
+
+.header-content{
+position: relative;
+z-index: 1;
+}
+
+@media screen  and (max-width:992px){
+    .nav-list{
+        display: none;
+    }
+    .nav-toggle{
+        display: block;
+    }
+    
+}

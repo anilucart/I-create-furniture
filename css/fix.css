@@ -1,0 +1,97 @@
+/* є у мене Position:relative; це штука в якій є top вона рухається від гори всі елменти рухаються від того обєкту який вказаний 
+напрниклад  якщо буде right то елемент буде рухатися від елементу в ліво 
+top right left bottom
+z-index: 1;жмижна задати приорітет 1 буде приорітетніше 0 */
+/* position:absolute;{
+
+ в ній елемент щось по типу перекриває чі то нищій або взагалі прекриває
+ z-index - That index work only If you use the position not static
+} */
+.per{
+    padding: 10px 0;
+    margin-top: 50px;
+    background-color: indigo;
+    font-size: 37px;
+    color: white;
+    height: 4000px;
+}
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 400px;
+    font-size: 36px;
+    color: white;
+}
+.child-1{
+    background-color: brown;
+   
+   /* :absolute
+   :reletion
+   це властивості position: fixed; він фіксує обєкт на екрані  */
+}
+.child-2{
+ position:absolute;
+background-color: chocolate;
+z-index: 6;
+right: 0;
+/* If I want to use position sticky it stick for top of my  display on zero top zero top it's one different for position relative
+If I scrolling my display, it's a position fix it fix it there element for my display */
+}
+.child-3{
+    /* якщо наприклад я хочу щоб мій блок був у батьківському а не виліз зовні то мені потріно прописати position:reletive;
+      в батьківському блоці */
+      /* I want to use a position fixed because fix it position. It's fix and fix it to all of bar if 
+      I want to scrolling it's going to scroll yeah it's fix it for my. */
+    background-color: aquamarine;
+    position: relative;
+    z-index: 5;
+}
+/* position :absolute ;робить з лінійних елементві блочні */
+
+/* штука для трансформ */
+
+.test-transform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left:50px;
+    font-family: Arial, Helvetica, sans-serif;
+     transition: all 2s ease; /* правнісить завдяки транзішн */
+}
+
+.test-rotere{
+background-color: #17baaa;
+}
+
+.test-rotere:hover{
+transform: rotateX(-187deg ); /* ну тут наче зрозуміло перевертання обєкта 
+можна прописти замість rotate rotateX є що ось y та інші */
+}
+.test-scale{
+background-color: #c9233a;
+}
+.test-scale:hover{
+transform: scale(2);  /* збільшення обєкта*/
+}
+.test-translate{
+background-color: aqua;
+}
+.test-translate:hover{
+ transform: translate(-70px,60px); /* здвигає в різні сторони  можна використовувати % але
+ в цьому випадку елемент буде рухатись на 100% своєї власної довжини*/
+}
+
+.test-skew{
+   transform-origin: bottom right; /*  */
+background-color: #dd3d34;
+}
+.test-skew:hover{
+
+transform: skew(80deg,8deg);
+}
