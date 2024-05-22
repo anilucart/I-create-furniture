@@ -35,7 +35,7 @@ text-decoration: none;
 .header::after{
 content: '';
 position: absolute;
-background: #0c2936;
+background: #0D1717;
 opacity: .6;
 top: 0;
 left: 0;
@@ -143,7 +143,7 @@ nth-of-type  я звертаюсь суто до li тому різниця оч
   
 }
 .nav-list li:last-child a:hover{
-    background-color:#c9233a;
+    background-color:#0D1717;
 
 }
 /* їх можна писати в новому рядку кожен маю на увазі псевдоклас  */
@@ -153,9 +153,10 @@ nth-of-type  я звертаюсь суто до li тому різниця оч
 .h1color1{
     size: 500px;
     font-size: 60px;
+    color: white;
 }
 .h1color2{
-    color: #17baaa;
+    color: #0B1215;
     font-size: 56px;
 }
 
